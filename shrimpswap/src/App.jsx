@@ -1,6 +1,11 @@
+import React from "react";
 import { motion } from "framer-motion";
 
 function App() {
+  const handleStartClick = () => {
+    alert("ShrimpSwap coming soon! 🦐✨");
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-700 via-pink-500 to-red-400 text-white">
       <motion.h1
@@ -21,9 +26,11 @@ function App() {
         a shrimp, dream like a mage.
       </motion.p>
       <motion.button
+        type="button"
         className="px-6 py-3 bg-yellow-400 text-black font-bold rounded-xl shadow-lg hover:bg-yellow-300"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
+        onClick={handleStartClick}
       >
         Start Swapping 🦐
       </motion.button>
